@@ -11,6 +11,7 @@ var possuiCarro = true;
 var possuiCasa = true;
 var darCredito;
 
-darCredito = possuiCarro && possuiCasa ? true : false;
+darCredito = possuiCarro && possuiCasa;
+darCredito = possuiCarro && possuiCasa ? 'Dar crédito ao cliente' : 'Negar crédito';
 
 console.log(darCredito);
