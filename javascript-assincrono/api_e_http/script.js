@@ -1,16 +1,16 @@
-fetch("./dados.json")
-  .then((r) => r.text())
-  .then((jsonText) => {
-    const jsonFinal = JSON.parse(jsonText);
-    // console.log(jsonFinal);
-  });
+// fetch("https://pokeapi.co/api/v2/pokemon/1/")
+//   .then((r) => r.json())
+//   .then((pokemon) => {
+//     console.log(pokemon);
+//   });
 
-const configuracoes = {
-  player: "Google",
-  tempo: 25.5,
-  aula: "2.1 JavaScript",
+const url = "https://jsonplaceholder.typicode.com/posts/2";
+const options = {
+  method: "POST",
+  body: '{"title": "Javascript}',
+  headers: {
+    "Content-Type": "application/json; charset=utf-8",
+  },
 };
 
-localStorage.config = JSON.stringify(configuracoes);
-
-console.log(JSON.parse(localStorage.config));
+fetch(url, options).then((r) => console.log(r));
